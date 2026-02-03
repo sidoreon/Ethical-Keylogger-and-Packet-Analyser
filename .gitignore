@@ -1,0 +1,13 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# Runtime logs
+logs/*.log
+
+# OS files
+.DS_Store
