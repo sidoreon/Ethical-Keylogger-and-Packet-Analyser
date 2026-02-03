@@ -10,7 +10,7 @@ An ethical security tool that identifies suspicious activities by monitoring key
 
 - Real-time keyboard and network traffic monitoring
 - Correlation engine for identifying simultaneous anomalies
-- Tiered alert system (LOW, MEDIUM, HIGH severity)
+- Severity based tiered alert system
 - Rule-based detection for focused attacks
 - JSON logging for all events and alerts
 
@@ -73,7 +73,7 @@ sudo python -m network.packetmonitor -i eth0   # Specify interface
 
 **Network Anomaly:** ≥20 SYN packets in 10s window (indicates SYN floods/port scans)
 
-**Correlation:** HIGH severity alert when both occur within 10s
+**Correlation:** high severity alert when both occur within 10s
 
 **Rule-based:** Flags when ≥60% of SYNs target a single port
 
@@ -81,9 +81,9 @@ sudo python -m network.packetmonitor -i eth0   # Specify interface
 
 | Severity | Condition | Description |
 |----------|-----------|-------------|
-| **HIGH** | Input + Network correlation | Simultaneous input and network anomalies detected |
-| **MEDIUM** | Network anomaly only | Unusual network activity or focused port attacks |
-| **LOW** | Input anomaly only | Suspicious keyboard patterns without network activity |
+| **high** | Input + Network correlation | Simultaneous input and network anomalies detected |
+| **medium** | Network anomaly only | Unusual network activity or focused port attacks |
+| **low** | Input anomaly only | Suspicious keyboard patterns without network activity |
 
 ## Log Files
 
